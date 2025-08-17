@@ -254,11 +254,7 @@ This is test content about programming concepts and software development.
     @patch("anthropic.Anthropic")
     def test_full_query_flow_with_mocked_ai(self, mock_anthropic_class):
         """Test complete query flow with mocked AI responses"""
-        from test_ai_generator_tool_calling import (
-            MockAnthropicContentBlock,
-            MockAnthropicResponse,
-        )
-
+        from conftest import MockAnthropicContentBlock, MockAnthropicResponse
         # Mock Anthropic client
         mock_client = Mock()
         mock_anthropic_class.return_value = mock_client
