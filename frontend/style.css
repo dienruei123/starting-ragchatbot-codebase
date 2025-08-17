@@ -97,83 +97,52 @@ header h1 {
 
 /* Theme Toggle Button */
 .theme-toggle {
-    background: none;
-    border: none;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
     cursor: pointer;
-    padding: 0;
-    transition: transform 0.2s ease;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
     outline: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
 }
 
 .theme-toggle:hover {
+    background: var(--surface-hover);
+    border-color: var(--primary-color);
     transform: scale(1.05);
 }
 
 .theme-toggle:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
-    border-radius: 20px;
 }
 
 .theme-toggle:active {
     transform: scale(0.95);
 }
 
-.toggle-track {
-    width: 50px;
-    height: 26px;
-    background: var(--border-color);
-    border-radius: 13px;
-    position: relative;
-    transition: background-color 0.3s ease;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.theme-toggle:hover .toggle-track {
-    background: var(--surface-hover);
-}
-
-.toggle-thumb {
-    width: 22px;
-    height: 22px;
-    background: var(--text-primary);
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.theme-toggle.light .toggle-thumb {
-    transform: translateX(24px);
-    background: var(--primary-color);
-}
-
-.theme-toggle.light .toggle-track {
-    background: rgba(37, 99, 235, 0.3);
-}
-
 /* Toggle Icons */
-.icon {
+.theme-toggle .icon {
     position: absolute;
     transition: all 0.3s ease;
-    stroke: none;
 }
 
-.sun-icon {
+.theme-toggle .sun-icon {
     opacity: 1;
     transform: rotate(0deg) scale(1);
-    color: #fbbf24;
+    color: #f59e0b;
 }
 
-.moon-icon {
+.theme-toggle .moon-icon {
     opacity: 0;
     transform: rotate(180deg) scale(0.8);
-    color: #e5e7eb;
+    color: #94a3b8;
 }
 
 .theme-toggle.light .sun-icon {
