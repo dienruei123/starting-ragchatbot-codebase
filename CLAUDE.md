@@ -20,8 +20,30 @@ This is a Course Materials RAG (Retrieval-Augmented Generation) system built wit
 # Install dependencies
 uv sync
 
+# Install with development dependencies
+uv sync --extra dev
+
 # Start development server
 cd backend && uv run uvicorn app:app --reload --port 8000
+```
+
+### Code Quality
+
+```bash
+# Format code (black + isort)
+./scripts/format.sh
+
+# Run linting and type checking
+./scripts/lint.sh
+
+# Run all quality checks (format + lint + tests)
+./scripts/quality.sh
+
+# Individual commands
+uv run black backend/ main.py          # Format code
+uv run isort backend/ main.py           # Sort imports
+uv run flake8 backend/ main.py          # Lint code
+uv run mypy backend/ main.py            # Type checking
 ```
 
 ### Environment Setup
