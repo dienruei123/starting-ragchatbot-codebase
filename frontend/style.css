@@ -98,7 +98,7 @@ header h1 {
 /* Theme Toggle Button */
 .theme-toggle {
     background: var(--surface);
-    border: 1px solid var(--border-color);
+    border: none;
     cursor: pointer;
     padding: 8px;
     border-radius: 50%;
@@ -114,7 +114,6 @@ header h1 {
 
 .theme-toggle:hover {
     background: var(--surface-hover);
-    border-color: var(--primary-color);
     transform: scale(1.05);
 }
 
